@@ -4,6 +4,20 @@
 
 If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
 
+## Plan to Fetch and Render
+
+1. Initialize files, create app.js
+2. Checkout to branch to continue working.
+3. Make a plan (hi plan! It's me!)
+4. Create API template
+5. Create API fetching function
+6. Grab template to use in app.js
+7. Create function to render data from API
+8. Create eventlistener to change state on user interaction
+9. Create selector to switch between APIs
+10. Steps 5 - 8 for new API
+11. Pull Request and submit
+
 ## Making a plan
 
 1. **Make a drawing of your app. Simple "wireframes"**
