@@ -1,5 +1,6 @@
 // import functions
 import { getPokedex } from './fetch.js';
+import { getStarWarsFolx } from './fetch.js';
 
 //checking on import
 //console.log('app.js is here!!!')
@@ -32,10 +33,28 @@ async function loadPokedex() {
     }
 }
 
+async function loadStarWars() {
+    const starWarsFolx = await getStarWarsFolx();
+    for (let character of starWarsFolx) {
+        const clone = template.content.cloneNode(true);
+
+        const name = clone.querySelector('#name');
+        const height = clone.querySelector('#height');
+        const weight = clone.querySelector('#weight');
+        const home = clone.querySelector('#home');
+
+        name.textContent = 'Name: ' + character.name;
+        height.textContent = 'Height: ' + character.height;
+        weight.textContent = 'Weight: ' + character.mass;
+        home.textContent = 'Home: ' + character.homeworld;
+
+    }
+}
+
 // set event listeners 
     // get user input
     // use user input to update state 
     // update DOM to reflect the new state
 
-loadPokedex();
+loadStarWars();
 //console.l
