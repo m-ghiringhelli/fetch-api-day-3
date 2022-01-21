@@ -36,6 +36,7 @@ async function loadPokedex() {
 
 async function loadStarWars() {
     const starWarsFolx = await getStarWarsFolx();
+    
     for (let character of starWarsFolx) {
         const clone = template.content.cloneNode(true);
 
@@ -48,17 +49,24 @@ async function loadStarWars() {
         height.textContent = 'Height: ' + character.height;
         weight.textContent = 'Weight: ' + character.mass;
         home.textContent = 'Home: ' + character.homeworld;
-
+        
+        list.appendChild(clone);
     }
 }
 
 // set event listeners 
-selectEl.addEventListener('change', (e) => {
-    console.log('clicked!');
+selectEl.addEventListener('change', async(e) => {
+    const selected = e.target.value;
+
+    if (selected === 'pokemon') {
+        list.innerHTML = '';
+        await loadPokedex();
+
+    } else if (selected === 'star-wars') {
+        list.innerHTML = '';
+        await loadStarWars();
+    }
 });
     // get user input
     // use user input to update state 
     // update DOM to reflect the new state
-
-loadStarWars();
-//console.l
