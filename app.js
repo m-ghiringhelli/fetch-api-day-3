@@ -1,5 +1,6 @@
 // import functions
-
+import { getPokedex } from './fetch.js';
+console.log('app.js is here!!!')
 // grab DOM elements
 
 // set event listeners 
