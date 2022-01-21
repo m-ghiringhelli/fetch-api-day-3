@@ -4,3 +4,8 @@ export async function getPokedex() {
     const json = await pokedex.json();
     return json.results;
 }
+export async function getStarWarsFolx() {
+    let url = 'https://swapi.dev/api/people';
+    const starWarsDex = await fetch(url);
+    return starWarsDex.results;
+}
