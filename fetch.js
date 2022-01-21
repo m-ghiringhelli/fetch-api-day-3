@@ -1,6 +1,6 @@
 export async function getPokedex() {
     let url = 'https://pokedex-alchemy.herokuapp.com/api/pokedex';
-    const pokedek = await fetch(url);
-    const json = await pokedek.json();
+    const pokedex = await fetch(url);
+    const json = await pokedex.json();
     return json.results;
 }
