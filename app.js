@@ -8,7 +8,8 @@ import { getStarWarsFolx } from './fetch.js';
 // grab DOM elements
 const template = document.querySelector('#template');
 const list = document.querySelector('#list');
-//const selectEl = document.querySelector('select');
+const selectEl = document.querySelector('select');
+
 //checking on grab
 //console.log('template', template);
 
@@ -52,6 +53,9 @@ async function loadStarWars() {
 }
 
 // set event listeners 
+selectEl.addEventListener('change', (e) => {
+    console.log('clicked!');
+});
     // get user input
     // use user input to update state 
     // update DOM to reflect the new state
