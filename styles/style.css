@@ -1,3 +1,7 @@
+* {
+    font-family: 'Luxurious Roman', serif;
+}
+
 body {
     /* feel free to update these css variables for a quick theme */
 
@@ -26,7 +30,7 @@ body {
     --gutter: 30px;
     --footer-height: 30px;
 
-    font-family: 'Titillium Web', sans-serif;
+    
     background-color: var(--color2);
 }
 
@@ -36,6 +40,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    padding-top: 50px;
 }
 
 section {
